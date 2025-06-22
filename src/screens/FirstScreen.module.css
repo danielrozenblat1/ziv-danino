@@ -9,7 +9,6 @@
     padding: 0;
     overflow: hidden;
     position: relative;
-  
 }
 
 /* גרדיאנט אינטראקטיבי ברקע */
@@ -219,7 +218,7 @@
     }
 }
 
-/* =========== Hero Image - בלי אפקט פרלקס =========== */
+/* =========== Hero Image - לפי רוחב במקום גובה =========== */
 .heroImageContainer {
     width: 62%;
     max-width: 520px;
@@ -237,9 +236,10 @@
 }
 
 .heroImage {
-    width: 100%;
-    height: 42vh;
-    object-fit: cover;
+    width: 100%; /* התמונה תמלא את כל הרוחב של הקונטיינר */
+    height: auto; /* הגובה יהיה אוטומטי לפי יחס התמונה */
+    max-width: 100%; /* ודאות שלא תחרוג מהקונטיינר */
+    object-fit: contain; /* שמירה על יחס התמונה */
     display: block;
     overflow: visible;
     border-radius: 20px;
@@ -254,9 +254,9 @@
 /* =========== כפתור CTA רחב יותר וגדול יותר =========== */
 .ctaButton {
     position: relative;
-    padding: 20px 80px; /* הקטנת padding */
+    padding: 20px 80px;
     font-family: "OpenSans", sans-serif;
-    font-size: 1.3rem; /* הקטנת גודל פונט */
+    font-size: 1.3rem;
     font-weight: 600;
     color: #654321;
     background: rgba(255, 255, 255, 0.25);
@@ -273,7 +273,7 @@
     transition: all 0.3s ease;
     overflow: hidden;
     z-index: 2;
-    min-width: 450px; /* הקטנת רוחב מינימלי */
+    min-width: 450px;
     text-align: center;
     flex-shrink: 0;
     letter-spacing: -0.5px;
@@ -317,7 +317,7 @@
 }
 
 .ctaButton:hover .buttonGlow {
-    width: 200px; /* הגדלת אפקט הזוהר */
+    width: 200px;
     height: 100px;
 }
 
@@ -397,17 +397,13 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 45vh;
+        width: 85%; /* הקטנת רוחב קלה בטלפונים קטנים */
     }
     
     .ctaButton {
-        font-size: 1rem; /* גודל פונט מותאם */
-        padding: 14px 30px; /* padding מותאם */
-        min-width: 250px; /* רוחב מותאם */
+        font-size: 1rem;
+        padding: 14px 30px;
+        min-width: 250px;
         margin: 0 0 0.5rem;
         letter-spacing: -0.3px;
     }
@@ -452,14 +448,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-        
-    }
-    
-    .heroImage {
-        width:100%;
-        object-fit: cover;
-          overflow: visible;
+        width: 90%;
     }
     
     .ctaButton {
@@ -510,11 +499,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 55vh;
+        width: 85%;
     }
     
     .ctaButton {
@@ -560,11 +545,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 60vh;
+        width: 80%;
     }
     
     .ctaButton {
@@ -605,11 +586,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 55vh;
+        width: 75%;
     }
     
     .ctaButton {
@@ -650,11 +627,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 60vh;
+        width: 70%;
     }
     
     .ctaButton {
@@ -695,11 +668,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 65vh;
+        width: 68%;
     }
     
     .ctaButton {
@@ -735,11 +704,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 68vh;
+        width: 65%;
     }
     
     .ctaButton {
@@ -775,11 +740,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 69vh;
+        width: 64%;
     }
     
     .ctaButton {
@@ -815,11 +776,7 @@
     }
     
     .heroImageContainer {
-        width: 95%;
-    }
-    
-    .heroImage {
-        height: 70vh;
+        width: 62%;
     }
     
     .ctaButton {
