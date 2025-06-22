@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styles from './FirstScreen.module.css';
 import ziv from "../images/זיו דנינו ללא רקע.png"
+import Loader from '../components/loader/Loader';
 
 const FirstScreen = () => {
   // עבור הגרדיאנט המרחף
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // עבור טעינת התמונה
+  const [imageLoaded, setImageLoaded] = useState(false);
   
   // מעקב אחרי מיקום העכבר עבור אפקט הגרדיאנט
   useEffect(() => {
@@ -15,6 +18,24 @@ const FirstScreen = () => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  // טעינת התמונה מראש
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setImageLoaded(true);
+    };
+    img.onerror = () => {
+      // אם יש שגיאה בטעינת התמונה, עדיין נציג את הקומפוננטה
+      setImageLoaded(true);
+    };
+    img.src = ziv;
+  }, []);
+
+  // אם התמונה לא נטענה עדיין, הצג Loader
+  if (!imageLoaded) {
+    return <Loader />;
+  }
 
   return (
     <div className={styles.container}>
