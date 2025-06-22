@@ -459,6 +459,7 @@
     .heroImage {
         width:100%;
         object-fit: cover;
+          overflow: visible;
     }
     
     .ctaButton {
