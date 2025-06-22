@@ -1,0 +1,533 @@
+/* Me.module.css - Light Mode with Soft Pink Accents */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Base section styling */
+.section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #fffffb 0%, #fdf9f7 25%, #f8f4f1 50%, #f3efeb 75%, #f0ebe7 100%);
+  color: #2c1810;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(44, 24, 16, 0.04) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(61, 41, 20, 0.03) 0%, transparent 60%),
+    radial-gradient(circle at 40% 40%, rgba(139, 69, 19, 0.03) 0%, transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(247, 219, 219, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Main container layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0;
+  align-items: stretch;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Image section with soft background */
+.imageWrapper {
+  width: 100%;
+  height: auto;
+  min-height: fit-content;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(252, 247, 245, 0.8) 0%,
+    rgba(250, 242, 240, 0.6) 25%,
+    rgba(248, 238, 236, 0.4) 50%,
+    rgba(245, 235, 233, 0.6) 75%,
+    rgba(252, 247, 245, 0.8) 100%
+  );
+}
+
+.imageWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center bottom,
+    rgba(247, 219, 219, 0.15) 0%,
+    rgba(240, 200, 200, 0.08) 30%,
+    rgba(235, 185, 185, 0.04) 60%,
+    transparent 80%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain;
+  object-position: center;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 4px 12px rgba(44, 24, 16, 0.08));
+}
+
+/* Content section */
+.content {
+  padding: 60px 80px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(253, 249, 247, 0.5) 25%,
+    rgba(250, 245, 243, 0.6) 50%,
+    rgba(248, 242, 240, 0.5) 75%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  backdrop-filter: blur(15px);
+  border-left: 1px solid rgba(44, 24, 16, 0.15);
+  position: relative;
+  direction: rtl;
+  text-align: right;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(44, 24, 16, 0.02) 45%,
+    rgba(247, 219, 219, 0.03) 50%,
+    rgba(44, 24, 16, 0.02) 55%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* Typography */
+.mainTitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(135deg, #2c1810 0%, #3d2914 50%, #1a0f0a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+/* Quote Container - Glass Liquid Effect with Pink Accents */
+.quoteContainer {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(253, 249, 247, 0.7) 25%,
+    rgba(250, 245, 243, 0.8) 50%,
+    rgba(248, 242, 240, 0.7) 75%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  border: 1px solid rgba(44, 24, 16, 0.1);
+  padding: 25px 30px;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgba(44, 24, 16, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(247, 219, 219, 0.1);
+}
+
+.quoteContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(247, 219, 219, 0.3),
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.quoteContainer:hover::before {
+  left: 100%;
+}
+
+.quoteContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(247, 219, 219, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.quote {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #2c1810;
+  line-height: 1.6;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.textBlock {
+  margin-bottom: 3rem;
+}
+
+.paragraph {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #3d2914;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.paragraph strong {
+  font-weight: 500;
+  color: #2c1810;
+  font-size: 1.05rem;
+}
+
+/* Elegant Liquid Divider with Enhanced Pink Accents */
+.divider {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(247, 219, 219, 0.6) 10%,
+    rgba(240, 200, 200, 0.7) 20%,
+    rgba(235, 185, 185, 0.8) 30%,
+    rgba(196, 147, 146, 0.9) 40%,
+    rgba(185, 125, 125, 0.8) 50%,
+    rgba(196, 147, 146, 0.9) 60%,
+    rgba(235, 185, 185, 0.8) 70%,
+    rgba(240, 200, 200, 0.7) 80%,
+    rgba(247, 219, 219, 0.6) 90%,
+    transparent 100%
+  );
+  margin: 1.5rem auto;
+  position: relative;
+  border-radius: 1px;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(196, 147, 146, 0.9) 0%, rgba(247, 219, 219, 0.5) 50%, transparent 80%);
+  border-radius: 50%;
+}
+
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(252, 240, 240, 0.8) 20%,
+    rgba(250, 230, 230, 0.9) 40%,
+    rgba(247, 219, 219, 1) 50%,
+    rgba(250, 230, 230, 0.9) 60%,
+    rgba(252, 240, 240, 0.8) 80%,
+    transparent 100%
+  );
+  transform: translateY(-0.5px);
+  border-radius: 0.5px;
+}
+
+/* Final text styling */
+.finalText {
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #2c1810;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+  margin-top: 2.5rem;
+}
+
+/* CTA Button - Glass Liquid with Pink Accents */
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 20px 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(253, 249, 247, 0.6) 25%,
+    rgba(250, 245, 243, 0.7) 50%,
+    rgba(248, 242, 240, 0.6) 75%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(196, 147, 146, 0.3);
+  border-radius: 30px;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c1810;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 24px rgba(44, 24, 16, 0.1),
+    inset 0 1px 0 rgba(247, 219, 219, 0.4);
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(247, 219, 219, 0.4),
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.ctaButton:hover::before {
+  left: 100%;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 36px rgba(44, 24, 16, 0.15),
+    inset 0 1px 0 rgba(247, 219, 219, 0.6);
+  border-color: rgba(196, 147, 146, 0.5);
+  color: #1a0f0a;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(253, 249, 247, 0.8) 25%,
+    rgba(250, 245, 243, 0.9) 50%,
+    rgba(248, 242, 240, 0.8) 75%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+}
+
+.buttonIcon {
+  font-size: 1.3rem;
+}
+
+/* Animation helper class */
+.revealItem {
+  visibility: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .imageWrapper {
+    height: auto;
+    min-height: fit-content;
+    order: 1;
+    padding: 0;
+    align-items: flex-end;
+  }
+  
+  .image {
+    height: auto;
+    max-height: 55vh;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .content {
+    height: auto;
+    padding: 40px 60px;
+    order: 2;
+    border-left: none;
+    border-top: 1px solid rgba(44, 24, 16, 0.15);
+  }
+  
+  .mainTitle {
+    font-size: 1.7rem;
+  }
+  
+  .quote {
+    font-size: 1.15rem;
+  }
+  
+  .divider {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .imageWrapper {
+    height: auto;
+    min-height: fit-content;
+    padding: 0;
+    order: 1;
+    align-items: flex-end;
+  }
+
+  .image {
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .content {
+    padding: 30px 20px;
+    text-align: center;
+    border-left: none;
+    border-top: 1px solid rgba(44, 24, 16, 0.15);
+  }
+
+  .mainTitle {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .quote {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .quoteContainer {
+    padding: 20px 25px;
+  }
+
+  .divider {
+    width: 40%;
+    margin: 1.5rem auto;
+  }
+
+  .finalText {
+    text-align: center;
+  }
+
+  .ctaButton {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    height: auto;
+    min-height: fit-content;
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .image {
+    height: auto;
+    max-height: 45vh;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .mainTitle {
+    font-size: 1.7rem;
+    letter-spacing: -1px;
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+  }
+
+  .ctaButton {
+    padding: 18px 25px;
+    font-size: 1rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  .quoteContainer {
+    padding: 18px 20px;
+  }
+
+  .divider {
+    width: 35%;
+  }
+
+  .content {
+    padding: 20px 18px;
+  }
+}

@@ -1,0 +1,173 @@
+.center {
+  display: flex;
+  justify-content: center;
+  margin: 2% auto;
+}
+
+.button {
+  position: relative;
+  /* רקע זכוכית נוזלית עם שקיפות */
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.25) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.08) 75%,
+    rgba(255, 255, 255, 0.05) 100%);
+  
+  /* אפקט זכוכית מטושטשת */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  /* גבול זכוכית עדין */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  
+  color: #2d3748;
+  padding: 18px 42px;
+  font-size: 1.1rem;
+  font-family: "AssistantR", sans-serif;
+  font-weight: 500;
+  direction: rtl;
+  
+  /* צורה מלבנית מעוגלת */
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  
+  /* מעברים חלקים */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* צללים עדינים לאפקט זכוכית */
+  box-shadow: 
+    0 8px 32px rgba(31, 38, 135, 0.15),
+    0 4px 16px rgba(31, 38, 135, 0.1),
+    0 2px 8px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 50%);
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  
+  /* הגברת אפקט הזכוכית בהובר */
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.2) 0%, 
+    rgba(255, 255, 255, 0.3) 25%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.12) 75%,
+    rgba(255, 255, 255, 0.08) 100%);
+  
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  
+  border-color: rgba(255, 255, 255, 0.25);
+  border-top-color: rgba(255, 255, 255, 0.4);
+  border-left-color: rgba(255, 255, 255, 0.3);
+  
+  box-shadow: 
+    0 16px 48px rgba(31, 38, 135, 0.2),
+    0 8px 24px rgba(31, 38, 135, 0.15),
+    0 4px 12px rgba(255, 255, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.button:active {
+  transform: translateY(0px);
+  
+  /* אפקט לחיצה עדין */
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.2) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    rgba(255, 255, 255, 0.03) 100%);
+  
+  box-shadow: 
+    0 4px 16px rgba(31, 38, 135, 0.15),
+    0 2px 8px rgba(31, 38, 135, 0.1),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* אנימציית נוזל זכוכית */
+.shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.6) 52%,
+    rgba(255, 255, 255, 0.3) 54%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: rotate(-30deg);
+  animation: liquidShine 6s infinite ease-in-out;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+@keyframes liquidShine {
+  0% {
+    transform: translate(-120%, -120%) rotate(-30deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  20% {
+    transform: translate(-60%, -60%) rotate(-30deg) scale(1);
+  }
+  80% {
+    transform: translate(60%, 60%) rotate(-30deg) scale(1.1);
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(120%, 120%) rotate(-30deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* אפקט נוזל נוסף */
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    transparent 50%);
+  border-radius: 16px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover::after {
+  opacity: 1;
+}

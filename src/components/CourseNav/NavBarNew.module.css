@@ -1,0 +1,576 @@
+.navbar {
+  position: fixed;
+  width: 70%;
+  max-width: 1200px;
+  height: 80px;
+  z-index: 1000;
+  box-sizing: border-box;
+  font-family: "AssistantR";
+  margin: 20px auto;
+  border-radius: 40px;
+  transition: all 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0;
+  transform: translateY(-30px);
+  left: 15%;
+  right: 15%;
+  top: 20px;
+  overflow: hidden;
+}
+
+/* Visibility classes */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideInWithBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-30px);
+  pointer-events: none;
+}
+
+/* Enhanced glass effect with gradient borders - ורוד שמנת עדין */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 248, 250, 0.35) 30%,
+    rgba(255, 255, 255, 0.30) 70%,
+    rgba(255, 252, 253, 0.25) 100%);
+  z-index: 0;
+  border-radius: 40px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid;
+  border-image: linear-gradient(45deg, 
+    rgba(255, 228, 225, 0.3),
+    rgba(255, 218, 215, 0.2),
+    rgba(255, 255, 255, 0.4)) 1;
+  box-shadow: 
+    0 4px 30px rgba(255, 228, 225, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 -1px 0 rgba(255, 218, 215, 0.03) inset;
+}
+
+/* Floating animation */
+@keyframes slideInWithBounce {
+  0% {
+    transform: translateY(-50px) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(5px) scale(1.02);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Subtle floating effect when visible */
+.visible::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 40px;
+  animation: gentleFloat 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { 
+    transform: translateY(0px);
+    box-shadow: 0 4px 30px rgba(255, 228, 225, 0.08);
+  }
+  50% { 
+    transform: translateY(-2px);
+    box-shadow: 0 8px 35px rgba(255, 218, 215, 0.12);
+  }
+}
+
+.navbarInner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+/* Enhanced Logo styles with holographic effect - ורוד שמנת עדין */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, 
+    rgba(255, 228, 225, 0.2),
+    rgba(255, 218, 215, 0.15),
+    rgba(255, 255, 255, 0.3));
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.logo:hover::before {
+  opacity: 1;
+  animation: holographicPulse 2s ease-in-out infinite;
+}
+
+.logo img {
+  height: 60px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 3px rgba(255, 228, 225, 0.3));
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  animation: pulseLogo 3s ease-in-out infinite;
+}
+
+.logo:hover img {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 15px rgba(255, 218, 215, 0.4));
+}
+
+@keyframes pulseLogo {
+  0%, 100% { 
+    filter: drop-shadow(0 0 3px rgba(255, 228, 225, 0.3)); 
+  }
+  50% { 
+    filter: drop-shadow(0 0 8px rgba(255, 218, 215, 0.4)); 
+  }
+}
+
+@keyframes holographicPulse {
+  0%, 100% { 
+    background: linear-gradient(45deg, 
+      rgba(255, 228, 225, 0.2),
+      rgba(255, 218, 215, 0.15),
+      rgba(255, 255, 255, 0.3));
+  }
+  50% { 
+    background: linear-gradient(45deg, 
+      rgba(255, 218, 215, 0.25),
+      rgba(255, 228, 225, 0.2),
+      rgba(255, 248, 250, 0.2));
+  }
+}
+
+/* Revolutionary Menu Button Design - ורוד שמנת עדין */
+.menuButton {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 248, 250, 0.45) 50%,
+    rgba(255, 255, 255, 0.4) 100%);
+  color: #2c2c2c;
+  border: 1px solid rgba(255, 228, 225, 0.2);
+  font-family: "AssistantR";
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  border-radius: 30px;
+  margin-right: 50px;
+  min-width: 160px;
+  height: 45px;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 
+    0 4px 15px rgba(255, 228, 225, 0.15),
+    0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Morphing effect on hover */
+.menuButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 218, 215, 0.3), 
+    transparent);
+  transition: left 0.6s ease;
+  z-index: 0;
+}
+
+.menuButton:hover::before {
+  left: 100%;
+}
+
+/* Ripple effect */
+.menuButton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 228, 225, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  z-index: 0;
+}
+
+.menuButton:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+.buttonContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  direction: rtl;
+  height: 100%;
+  z-index: 1;
+}
+
+.buttonText, .buttonTextHover {
+  display: block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.buttonTextHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(50px) scale(0.8);
+  opacity: 0;
+  color: #b08080;
+}
+
+.menuButton:hover {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 248, 250, 0.7) 50%,
+    rgba(255, 255, 255, 0.6) 100%);
+  box-shadow: 
+    0 8px 25px rgba(255, 218, 215, 0.2),
+    0 2px 0 rgba(255, 255, 255, 0.7) inset;
+  transform: translateY(-2px) scale(1.02);
+  border-color: rgba(255, 218, 215, 0.25);
+}
+
+.menuButton:hover .buttonText {
+  transform: translateY(-50px) scale(0.8);
+  opacity: 0;
+}
+
+.menuButton:hover .buttonTextHover {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.menuButton:active {
+  transform: translateY(0) scale(0.98);
+  transition: all 0.1s ease;
+}
+
+/* Enhanced Mobile Menu with Particle Effect - ורוד שמנת עדין */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1001;
+  animation: revealMenuEnhanced 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mobileMenu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 248, 250, 0.8) 30%,
+    rgba(255, 255, 255, 0.75) 70%,
+    rgba(255, 252, 253, 0.7) 100%);
+  z-index: -1;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Animated particles background */
+.mobileMenu::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255, 228, 225, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 80% 40%, rgba(255, 218, 215, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 100px 100px, 150px 150px, 120px 120px;
+  animation: particleFloat 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-100px) rotate(360deg); }
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 248, 250, 0.5) 100%);
+  border-bottom: 1px solid rgba(255, 228, 225, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.closeButton {
+  color: #2c2c2c;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 248, 250, 0.6) 100%);
+  border: 1px solid rgba(255, 228, 225, 0.1);
+  box-shadow: 0 2px 10px rgba(255, 228, 225, 0.08);
+}
+
+.closeButton:hover {
+  color: #b08080;
+  background: linear-gradient(135deg, 
+    rgba(255, 218, 215, 0.4) 0%,
+    rgba(255, 255, 255, 0.6) 100%);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 218, 215, 0.12);
+}
+
+.mobileMenuLogo {
+  padding: 10px;
+}
+
+.mobileMenuLogo img {
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3px rgba(255, 192, 203, 0.4));
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.mobileMenuContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background: linear-gradient(180deg, 
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 240, 245, 0.25) 50%,
+    rgba(255, 255, 255, 0.2) 100%);
+  animation: fadeInContentEnhanced 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
+  opacity: 0;
+}
+
+.mobileLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.mobileLogo::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle, 
+    rgba(255, 192, 203, 0.2) 0%,
+    rgba(255, 182, 193, 0.15) 50%,
+    transparent 70%);
+  border-radius: 50%;
+  animation: pulseMobile 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+.mobileLogo img {
+  height: 70px;
+  object-fit: cover;
+  filter: drop-shadow(0 0 3px rgba(255, 192, 203, 0.4));
+  animation: logoRotate 8s linear infinite;
+}
+
+@keyframes pulseMobile {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% { 
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+@keyframes logoRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.mobileMenu.closing {
+  animation: closeMenuEnhanced 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.closing .mobileMenuContent {
+  animation: fadeOutContentEnhanced 0.6s ease-in forwards;
+}
+
+@keyframes revealMenuEnhanced {
+  0% {
+    clip-path: circle(0% at top right);
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    clip-path: circle(150% at top right);
+    transform: scale(1);
+  }
+}
+
+@keyframes closeMenuEnhanced {
+  0% {
+    clip-path: circle(150% at top right);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    clip-path: circle(0% at top right);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeInContentEnhanced {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeOutContentEnhanced {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .navbar {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+  
+  .navbarInner {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 95%;
+    height: 70px;
+    left: 2.5%;
+    right: 2.5%;
+  }
+  
+  .navbarInner {
+    padding: 0 15px;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .menuButton {
+    min-width: 140px;
+    font-size: 1rem;
+    padding: 6px 15px;
+    height: 40px;
+  }
+}

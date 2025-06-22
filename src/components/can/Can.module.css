@@ -1,0 +1,416 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+  padding: 16px 20px;
+  direction: rtl;
+  width: 320px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  
+  /* Liquid Glass Morphism Effect - Creamy Pink to White Linear Gradient */
+  background: linear-gradient(90deg, 
+    rgba(242, 235, 232, 0.95) 0%, 
+    rgba(244, 237, 236, 0.93) 12%,
+    rgba(246, 240, 239, 0.91) 25%,
+    rgba(248, 243, 242, 0.89) 38%,
+    rgba(250, 246, 245, 0.87) 50%,
+    rgba(252, 249, 248, 0.89) 62%,
+    rgba(253, 251, 250, 0.91) 75%,
+    rgba(254, 253, 252, 0.93) 88%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  backdrop-filter: blur(25px) saturate(1.1);
+  -webkit-backdrop-filter: blur(25px) saturate(1.1);
+  
+  /* Border and Shape */
+  border-radius: 20px;
+  border: 1px solid rgba(240, 228, 225, 0.5);
+  border-top: 1px solid rgba(255, 248, 245, 0.7);
+  
+  /* Enhanced Glass Shadow - Minimal Inner Shadows */
+  box-shadow: 
+    0 10px 40px rgba(160, 130, 100, 0.08),
+    0 4px 16px rgba(255, 192, 203, 0.06),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(255, 228, 225, 0.1),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.15),
+    inset -2px -2px 6px rgba(160, 130, 100, 0.03),
+    inset 0 0 10px rgba(255, 240, 245, 0.08),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.2),
+    inset -0.5px -0.5px 2px rgba(200, 170, 140, 0.02),
+    inset 0 0 15px rgba(255, 248, 250, 0.05);
+  
+  /* Smooth Transitions */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced glass overlay with cream-pink to white gradient */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    rgba(250, 245, 242, 0.35) 0%, 
+    rgba(253, 250, 248, 0.25) 30%,
+    rgba(255, 255, 255, 0.15) 60%,
+    transparent 85%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Additional glass reflection layer with horizontal flow reversed */
+.container::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  height: 35%;
+  background: linear-gradient(90deg, 
+    rgba(248, 242, 240, 0.6) 0%, 
+    rgba(252, 248, 245, 0.4) 40%,
+    rgba(255, 255, 255, 0.2) 70%,
+    transparent 100%
+  );
+  border-radius: 18px 18px 50% 50%;
+  pointer-events: none;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 48px rgba(160, 130, 100, 0.12),
+    0 6px 20px rgba(255, 192, 203, 0.08),
+    inset 0 1px 3px rgba(255, 255, 255, 0.25),
+    inset 0 -1px 3px rgba(255, 228, 225, 0.12),
+    inset 2px 2px 8px rgba(255, 255, 255, 0.18),
+    inset -2px -2px 8px rgba(160, 130, 100, 0.04),
+    inset 0 0 12px rgba(255, 240, 245, 0.1),
+    inset 1px 1px 4px rgba(255, 255, 255, 0.25),
+    inset -0.5px -0.5px 3px rgba(200, 170, 140, 0.03),
+    inset 0 0 18px rgba(255, 248, 250, 0.06);
+  border-color: rgba(235, 220, 215, 0.6);
+  border-top-color: rgba(250, 245, 242, 0.8);
+  backdrop-filter: blur(30px) saturate(1.2);
+  -webkit-backdrop-filter: blur(30px) saturate(1.2);
+}
+
+.text {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.15rem;
+  direction: rtl;
+  margin-right: 20px;
+  font-weight: 400;
+  width: 70%;
+  position: relative;
+  color: rgba(90, 70, 60, 0.9);
+  line-height: 1.3;
+  /* Enhanced text shadow for soft cream-pink glass effect */
+  text-shadow: 0 1px 3px rgba(255, 250, 248, 0.9), 0 0 8px rgba(250, 242, 240, 0.6);
+}
+
+.icon {
+  width: 20%;
+  color: rgba(100, 80, 70, 0.85);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Enhanced icon shadow for soft cream-pink glass effect */
+  filter: drop-shadow(0 1px 3px rgba(255, 250, 248, 0.9)) drop-shadow(0 0 6px rgba(248, 240, 238, 0.5));
+}
+
+/* Elegant divider between icon and text */
+.icon::after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(160, 130, 110, 0.2) 20%,
+    rgba(160, 130, 110, 0.35) 50%,
+    rgba(160, 130, 110, 0.2) 80%,
+    transparent 100%
+  );
+}
+
+/* Responsive Design - מתחת ל-350px */
+@media (max-width: 349px) {
+  .container {
+    width: 90%;
+    max-width: 280px;
+    padding: 10px 14px;
+    margin: 10px auto;
+    border-radius: 16px;
+  }
+
+  .text {
+    font-size: 0.95rem;
+    margin-right: 14px;
+    width: 75%;
+    line-height: 1.25;
+  }
+
+  .icon {
+    width: 20%;
+  }
+
+  .icon::after {
+    left: -5px;
+    height: 50%;
+  }
+}
+
+/* 350px - 450px */
+@media (min-width: 350px) and (max-width: 450px) {
+  .container {
+    width: 90%;
+    max-width: 340px;
+    padding: 12px 16px;
+    margin: 12px auto;
+    border-radius: 18px;
+  }
+
+  .text {
+    font-size: 1rem;
+    margin-right: 16px;
+    width: 72%;
+    line-height: 1.28;
+  }
+
+  .icon {
+    width: 22%;
+  }
+
+  .icon::after {
+    left: -6px;
+    height: 55%;
+  }
+}
+
+/* 450px - 550px */
+@media (min-width: 450px) and (max-width: 550px) {
+  .container {
+    width: 85%;
+    max-width: 420px;
+    padding: 14px 18px;
+    margin: 14px auto;
+    border-radius: 19px;
+  }
+
+  .text {
+    font-size: 1.05rem;
+    margin-right: 18px;
+    width: 70%;
+    line-height: 1.3;
+  }
+
+  .icon {
+    width: 24%;
+  }
+
+  .icon::after {
+    left: -6px;
+    height: 58%;
+  }
+}
+
+/* 550px - 650px */
+@media (min-width: 550px) and (max-width: 650px) {
+  .container {
+    width: 80%;
+    max-width: 500px;
+    padding: 16px 20px;
+    margin: 15px auto;
+    border-radius: 20px;
+  }
+
+  .text {
+    font-size: 1.1rem;
+    margin-right: 20px;
+    width: 68%;
+    line-height: 1.3;
+  }
+
+  .icon {
+    width: 26%;
+  }
+
+  .icon::after {
+    left: -7px;
+    height: 60%;
+  }
+}
+
+/* 650px - 750px */
+@media (min-width: 650px) and (max-width: 750px) {
+  .container {
+    width: 75%;
+    max-width: 580px;
+    padding: 18px 22px;
+    margin: 16px auto;
+    border-radius: 22px;
+  }
+
+  .text {
+    font-size: 1.15rem;
+    margin-right: 22px;
+    width: 66%;
+    line-height: 1.32;
+  }
+
+  .icon {
+    width: 28%;
+  }
+
+  .icon::after {
+    left: -8px;
+    height: 62%;
+  }
+}
+
+/* 750px - 850px */
+@media (min-width: 750px) and (max-width: 850px) {
+  .container {
+    width: 70%;
+    max-width: 650px;
+    padding: 20px 24px;
+    margin: 18px auto;
+    border-radius: 24px;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    margin-right: 24px;
+    width: 64%;
+    line-height: 1.35;
+  }
+
+  .icon {
+    width: 30%;
+  }
+
+  .icon::after {
+    left: -9px;
+    height: 65%;
+  }
+}
+
+/* 850px - 950px */
+@media (min-width: 850px) and (max-width: 950px) {
+  .container {
+    width: 65%;
+    max-width: 720px;
+    padding: 22px 26px;
+    margin: 20px auto;
+    border-radius: 26px;
+  }
+
+  .text {
+    font-size: 1.25rem;
+    margin-right: 26px;
+    width: 62%;
+    line-height: 1.38;
+  }
+
+  .icon {
+    width: 32%;
+  }
+
+  .icon::after {
+    left: -10px;
+    height: 68%;
+  }
+}
+
+/* 950px - 1050px */
+@media (min-width: 950px) and (max-width: 1050px) {
+  .container {
+    width: 60%;
+    max-width: 800px;
+    padding: 24px 28px;
+    margin: 22px auto;
+    border-radius: 28px;
+  }
+
+  .text {
+    font-size: 1.3rem;
+    margin-right: 28px;
+    width: 60%;
+    line-height: 1.4;
+  }
+
+  .icon {
+    width: 34%;
+  }
+
+  .icon::after {
+    left: -11px;
+    height: 70%;
+  }
+}
+
+/* 1050px - 1150px */
+@media (min-width: 1050px) and (max-width: 1150px) {
+  .container {
+    width: 55%;
+    max-width: 900px;
+    padding: 26px 30px;
+    margin: 24px auto;
+    border-radius: 30px;
+  }
+
+  .text {
+    font-size: 1.35rem;
+    margin-right: 30px;
+    width: 58%;
+    line-height: 1.42;
+  }
+
+  .icon {
+    width: 36%;
+  }
+
+  .icon::after {
+    left: -12px;
+    height: 72%;
+  }
+}
+
+/* 1150px - 1250px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+  .container {
+    width: 50%;
+    max-width: 1000px;
+    padding: 28px 32px;
+    margin: 26px auto;
+    border-radius: 32px;
+  }
+
+  .text {
+    font-size: 1.4rem;
+    margin-right: 32px;
+    width: 56%;
+    line-height: 1.45;
+  }
+
+  .icon {
+    width: 38%;
+  }
+
+  .icon::after {
+    left: -13px;
+    height: 75%;
+  }
+}

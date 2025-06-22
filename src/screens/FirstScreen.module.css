@@ -1,0 +1,837 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    direction: rtl;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  
+}
+
+/* גרדיאנט אינטראקטיבי ברקע */
+.gradientBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    transition: background 0.3s ease;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    z-index: 1;
+    gap: 0.5rem;
+}
+
+/* =========== Intro Header with Glass Background - NEW =========== */
+.introHeader {
+    width: 100%;
+    background: rgba(139, 111, 78, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 111, 78, 0.2);
+    padding: 1.5rem 1rem;
+    box-shadow: 
+        0 8px 32px rgba(139, 111, 78, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.introHeader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(139, 111, 78, 0.1),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.introHeader:hover::before {
+    left: 100%;
+}
+
+.introText {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.introTitle {
+    font-family: "OpenSans", sans-serif;
+    font-size: 1.8rem;
+    color: #654321;
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(139, 111, 78, 0.2);
+}
+
+.introDescription {
+    font-family: "OpenSansR", sans-serif;
+    font-size: 1.6rem;
+    color: #8b6f4e;
+    margin: 0;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(139, 111, 78, 0.15);
+}
+
+.title {
+    font-family: "OpenSans", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem auto;
+    background: linear-gradient(135deg, #654321, #8b6f4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(139, 111, 78, 0.2);
+    line-height: 1.4;
+    max-width: 900px;
+    direction: rtl;
+    position: relative;
+    letter-spacing: -1.5px;
+    padding: 0 1rem;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.bold {
+    font-weight: 800;
+    position: relative;
+    color: #654321 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: #654321 !important;
+    text-shadow: none !important;
+}
+
+/* 3 underlines נפרדים */
+.underline1,
+.underline2,
+.underline3 {
+    position: relative;
+    display: inline-block;
+}
+
+.underline1::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, 
+        transparent, 
+        #8b6f4e, 
+        #d4af8c, 
+        #8b6f4e, 
+        transparent);
+    box-shadow: 0 1px 3px rgba(139, 111, 78, 0.4);
+    animation: shimmer1 2s ease-in-out infinite;
+}
+
+.underline2::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, 
+        transparent, 
+        #8b6f4e, 
+        #d4af8c, 
+        #8b6f4e, 
+        transparent);
+    box-shadow: 0 1px 3px rgba(139, 111, 78, 0.4);
+    animation: shimmer2 2s ease-in-out infinite 0.3s;
+}
+
+.underline3::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, 
+        transparent, 
+        #8b6f4e, 
+        #d4af8c, 
+        #8b6f4e, 
+        transparent);
+    box-shadow: 0 1px 3px rgba(139, 111, 78, 0.4);
+    animation: shimmer3 2s ease-in-out infinite 0.6s;
+}
+
+@keyframes shimmer1 {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scaleX(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes shimmer2 {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scaleX(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes shimmer3 {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scaleX(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* =========== Hero Image - בלי אפקט פרלקס =========== */
+.heroImageContainer {
+    width: 62%;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 20px;
+    overflow: visible;
+    transition: transform 0.5s ease;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.heroImage {
+    width: 100%;
+    height: 42vh;
+    object-fit: cover;
+    display: block;
+    overflow: visible;
+    border-radius: 20px;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    filter: drop-shadow(0 10px 30px rgba(139, 111, 78, 0.2));
+}
+
+.heroImage:hover {
+    transform: scale(1.02);
+}
+
+/* =========== כפתור CTA רחב יותר וגדול יותר =========== */
+.ctaButton {
+    position: relative;
+    padding: 20px 80px; /* הקטנת padding */
+    font-family: "OpenSans", sans-serif;
+    font-size: 1.3rem; /* הקטנת גודל פונט */
+    font-weight: 600;
+    color: #654321;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 111, 78, 0.3);
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 
+        0 8px 25px rgba(139, 111, 78, 0.15),
+        inset 0 2px 4px rgba(255, 255, 255, 0.3),
+        inset 0 -2px 4px rgba(139, 111, 78, 0.1);
+    margin: 0 0 2rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 2;
+    min-width: 450px; /* הקטנת רוחב מינימלי */
+    text-align: center;
+    flex-shrink: 0;
+    letter-spacing: -0.5px;
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 12px 35px rgba(139, 111, 78, 0.25),
+        inset 0 3px 6px rgba(255, 255, 255, 0.4),
+        inset 0 -3px 6px rgba(139, 111, 78, 0.15);
+    background: rgba(255, 255, 255, 0.35);
+    color: #5a3a1a;
+    border-color: rgba(139, 111, 78, 0.4);
+}
+
+.ctaButton:active {
+    transform: translateY(-1px);
+    box-shadow: 
+        0 6px 15px rgba(139, 111, 78, 0.2),
+        inset 0 1px 3px rgba(255, 255, 255, 0.2),
+        inset 0 -1px 3px rgba(139, 111, 78, 0.1);
+}
+
+.buttonText {
+    position: relative;
+    z-index: 2;
+    letter-spacing: -0.3px;
+}
+
+.buttonGlow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(139, 111, 78, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.ctaButton:hover .buttonGlow {
+    width: 200px; /* הגדלת אפקט הזוהר */
+    height: 100px;
+}
+
+/* אפקט אור בהובר */
+.ctaButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(139, 111, 78, 0.15),
+        transparent
+    );
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.ctaButton:hover::before {
+    left: 100%;
+}
+
+/* =========== אפקט Fade-In מדורג =========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInElement {
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+}
+
+.introHeader.fadeInElement { animation-delay: 0.2s; }
+.title.fadeInElement { animation-delay: 0.5s; }
+.heroImageContainer.fadeInElement { animation-delay: 0.8s; }
+.ctaButton.fadeInElement { animation-delay: 1.2s; }
+
+/* =========== מדיה קוורי מותאמים לגדלים הספציפיים =========== */
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+    .container {
+        justify-content: flex-start;
+        padding: 0 0 0.5rem;
+    }
+    
+    .content {
+        gap: 0.3rem;
+    }
+    
+    .introHeader {
+        padding: 0.8rem 0.5rem;
+    }
+    
+    .introTitle {
+        font-size: 1rem;
+    }
+    
+    .introDescription {
+        font-size: 0.9rem;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+        margin: 0.3rem auto;
+        letter-spacing: -0.5px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 45vh;
+    }
+    
+    .ctaButton {
+        font-size: 1rem; /* גודל פונט מותאם */
+        padding: 14px 30px; /* padding מותאם */
+        min-width: 250px; /* רוחב מותאם */
+        margin: 0 0 0.5rem;
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.2px;
+    }
+    
+    .buttonGlow {
+        width: 120px;
+        height: 60px;
+    }
+}
+
+/* 350-450px */
+@media (min-width: 350px) and (max-width: 450px) {
+    .container {
+        justify-content: flex-start;
+        padding: 0 0 0.8rem;
+    }
+    
+    .content {
+        gap: 0.5rem;
+    }
+    
+    .introHeader {
+        padding: 1rem 0.8rem;
+    }
+    
+    .introTitle {
+        font-size: 1.1rem;
+    }
+    
+    .introDescription {
+        font-size: 1rem;
+    }
+    
+    .title {
+        font-size: 1.4rem;
+        margin: 0.4rem auto;
+        letter-spacing: -0.8px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 50vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.1rem;
+        padding: 16px 35px;
+        min-width: 280px;
+        margin: 0 0 0.8rem;
+        letter-spacing: -0.4px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 130px;
+        height: 70px;
+    }
+}
+
+/* 450-550px */
+@media (min-width: 450px) and (max-width: 550px) {
+    .container {
+        justify-content: flex-start;
+        padding: 0 0 1rem;
+    }
+    
+    .content {
+        gap: 0.6rem;
+    }
+    
+    .introHeader {
+        padding: 1.2rem 1rem;
+    }
+    
+    .introTitle {
+        font-size: 1.2rem;
+    }
+    
+    .introDescription {
+        font-size: 1.1rem;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+        margin: 0.5rem auto;
+        letter-spacing: -1px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 55vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.2rem;
+        padding: 18px 40px;
+        min-width: 320px;
+        margin: 0 0 1rem;
+        letter-spacing: -0.4px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 140px;
+        height: 75px;
+    }
+}
+
+/* 550-650px */
+@media (min-width: 550px) and (max-width: 650px) {
+    .content {
+        gap: 0.7rem;
+    }
+    
+    .introHeader {
+        padding: 1.3rem 1rem;
+    }
+    
+    .introTitle {
+        font-size: 1.3rem;
+    }
+    
+    .introDescription {
+        font-size: 1.2rem;
+    }
+    
+    .title {
+        font-size: 1.7rem;
+        margin: 0.6rem auto;
+        letter-spacing: -1.2px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 60vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.25rem;
+        padding: 20px 50px;
+        min-width: 380px;
+        letter-spacing: -0.4px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 160px;
+        height: 80px;
+    }
+}
+
+/* 650-750px */
+@media (min-width: 650px) and (max-width: 750px) {
+    .content {
+        gap: 0.8rem;
+    }
+    
+    .introTitle {
+        font-size: 1.4rem;
+    }
+    
+    .introDescription {
+        font-size: 1.3rem;
+    }
+    
+    .title {
+        font-size: 1.9rem;
+        margin: 0.7rem auto;
+        letter-spacing: -1.3px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 55vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.3rem;
+        padding: 22px 60px;
+        min-width: 420px;
+        letter-spacing: -0.4px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 170px;
+        height: 85px;
+    }
+}
+
+/* 750-850px */
+@media (min-width: 750px) and (max-width: 850px) {
+    .content {
+        gap: 0.9rem;
+    }
+    
+    .introTitle {
+        font-size: 1.5rem;
+    }
+    
+    .introDescription {
+        font-size: 1.4rem;
+    }
+    
+    .title {
+        font-size: 2.1rem;
+        margin: 0.8rem auto;
+        letter-spacing: -1.4px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 60vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.35rem;
+        padding: 22px 70px;
+        min-width: 460px;
+        letter-spacing: -0.4px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 180px;
+        height: 90px;
+    }
+}
+
+/* 850-950px */
+@media (min-width: 850px) and (max-width: 950px) {
+    .content {
+        gap: 1rem;
+    }
+    
+    .introTitle {
+        font-size: 1.6rem;
+    }
+    
+    .introDescription {
+        font-size: 1.5rem;
+    }
+    
+    .title {
+        font-size: 2.3rem;
+        margin: 0.9rem auto;
+        letter-spacing: -1.5px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 65vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.4rem;
+        padding: 24px 80px;
+        min-width: 500px;
+        letter-spacing: -0.5px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 190px;
+        height: 95px;
+    }
+}
+
+/* 950-1050px */
+@media (min-width: 950px) and (max-width: 1050px) {
+    .introTitle {
+        font-size: 1.7rem;
+    }
+    
+    .introDescription {
+        font-size: 1.55rem;
+    }
+    
+    .title {
+        font-size: 2.4rem;
+        letter-spacing: -1.5px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 68vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.45rem;
+        padding: 24px 90px;
+        min-width: 540px;
+        letter-spacing: -0.5px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 195px;
+        height: 98px;
+    }
+}
+
+/* 1050-1150px */
+@media (min-width: 1050px) and (max-width: 1150px) {
+    .introTitle {
+        font-size: 1.75rem;
+    }
+    
+    .introDescription {
+        font-size: 1.58rem;
+    }
+    
+    .title {
+        font-size: 2.45rem;
+        letter-spacing: -1.5px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 69vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.48rem;
+        padding: 24px 100px;
+        min-width: 560px;
+        letter-spacing: -0.5px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+/* 1150-1250px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+    .introTitle {
+        font-size: 1.8rem;
+    }
+    
+    .introDescription {
+        font-size: 1.6rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        letter-spacing: -1.5px;
+    }
+    
+    .heroImageContainer {
+        width: 95%;
+    }
+    
+    .heroImage {
+        height: 70vh;
+    }
+    
+    .ctaButton {
+        font-size: 1.5rem;
+        padding: 24px 110px;
+        min-width: 580px;
+        letter-spacing: -0.5px;
+    }
+    
+    .buttonText {
+        letter-spacing: -0.3px;
+    }
+    
+    .buttonGlow {
+        width: 200px;
+        height: 100px;
+    }
+}
