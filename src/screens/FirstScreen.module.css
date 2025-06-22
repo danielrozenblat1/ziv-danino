@@ -453,10 +453,11 @@
     
     .heroImageContainer {
         width: 95%;
+        
     }
     
     .heroImage {
-        height: 50vh;
+   
     }
     
     .ctaButton {
