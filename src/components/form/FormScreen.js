@@ -20,7 +20,7 @@ const FormScreen = () => {
 
   // Server settings
   const serverUrl = "https://dynamic-server-dfc88e1f1c54.herokuapp.com/leads/newLead";
-  const reciver = "ziv@gmail.com"; // עודכן לזיו
+  const reciver = "Zivdanino1998@gmail.com"; // עודכן לזיו
 
   // Treatment options
   const treatmentOptions = [

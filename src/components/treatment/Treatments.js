@@ -3,21 +3,21 @@ import { FaUsers, FaPlus, FaMinus } from 'react-icons/fa';
 import styles from './Treatments.module.css';
 
 // Import הרמת ריסים images
-import riss1 from "../../images/זיו דנינו הרמת ריסים-1.png";
+import riss1 from "../../images/הרמת ריסים נושא.jpeg";
 import riss2 from "../../images/זיו דנינו הרמת ריסים-2.png";
 
 
 // Import מיקרופיגמנטציה בגבות images
-import gabotMicro1 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 1.png";
+import gabotMicro1 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 2.png";
 import gabotMicro2 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 5.png";
 import gabotMicro3 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 4.png";
-import gabotMicro4 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 3.png";
+import gabotMicro4 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 10.png";
 
 // Import מיקרופיגמנטציה בשפתיים images
 import sfatayimMicro1 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 6.png";
 import sfatayimMicro2 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 10.png";
 import sfatayimMicro3 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 11.png";
-import sfatayimMicro4 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 4.png";
+import sfatayimMicro4 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 9.png";
 
 // Import מיקרוטאץ' images
 import microTouch1 from "../../images/זיו דנינו מיקרוטאצ 1.png";
@@ -32,26 +32,26 @@ const TreatmentsDrawer = () => {
     {
       id: 1,
       name: 'מיקרופיגמנטציה לגבות',
-      description: '2 טיפולים + החלמה, תחזוקה כל שנה. תוצאה טבעית ומדויקת ללא צורך להתאפר יומית',
+      description: '2 טיפולים. תוצאה טבעית ומדויקת ללא צורך בתחזוקה יום יומית',
       mainImage: gabotMicro2,
       additionalImages: [gabotMicro1, gabotMicro2, gabotMicro3, gabotMicro4],
       problems: [
         'פתרון לגבות לא סימטריות או דלילות', 
         'חיסכון בזמן יקר כל בוקר', 
-        'תוצאה עמידה שלא נמחקת',
+        'תוצאה עמידה',
         'מראה טבעי ומדויק ללא מראה "עשוי"'
       ],
       suitableFor: [
-        'נשים בגילאי 20-60 שמחפשות מראה טבעי', 
-        'מי שמתאמצת עם האיפור כל בוקר',
-        'בעלות גבות לא סימטריות או עם חורים',
-        'מי שרוצה להרגיש יפה ובטוחה בעצמה'
+        'נשים שמחפשות מראה טבעי לגבות', 
+        'נשים שיש להן גבות לא סימטריות או עם חורים',
+        'נשים שרוצות להרגיש יפות ובטוחות בעצמן',
+        'נשים שרוצות להרגיש שלמות עם הגבות שלהן מול המראה'
       ]
     },
     {
       id: 2,
       name: 'מיקרופיגמנטציה לשפתיים',
-      description: '2 טיפולים + החלמה, תחזוקה כל שנה. פתרון לשפתיים כהות ויצירת סימטריה מושלמת',
+      description: '2 טיפולים. פתרון לשפתיים כהות ויצירת סימטריה מושלמת',
       mainImage: sfatayimMicro2,
       additionalImages: [sfatayimMicro1, sfatayimMicro2, sfatayimMicro3, sfatayimMicro4],
       problems: [
@@ -68,7 +68,7 @@ const TreatmentsDrawer = () => {
     },
     {
       id: 3,
-      name: 'מיקרוטאץ\'',
+      name: 'מיקרוטאצ\'',
       description: 'שיטה ייחודית שפיתחתי למילוי חורים קטנים בגבות. 30 דקות בלבד, מחזיק 3-4 חודשים',
       mainImage: microTouch2,
       additionalImages: [microTouch1, microTouch2, microTouch3, microTouch4],
@@ -79,29 +79,29 @@ const TreatmentsDrawer = () => {
         'תחזוקה קלה של גבות שכבר יפות'
       ],
       suitableFor: [
-        'מי שיש לה כבר בסיס גבות יפה וסדור',
-        'רוצה פתרון מהיר, נגיש ויעיל',
-        'לא זקוקה לשיקום מלא של הגבות',
-        'מחפשת תחזוקה קלה וחסכונית'
+        'מי שיש לה כבר בסיס גבות יפה ומסודר',
+        'מי שרוצה פתרון מהיר, נגיש ויעיל',
+        'מי שלא זקוקה לשינוי צורה קריטי של הגבות',
+      
       ]
     },
     {
       id: 4,
       name: 'הרמת ריסים',
-      description: 'ליפט טבעי שמרים את הריסים כמו מסקרה. טיפול עד שעה, מחזיק עד חודשיים',
+      description: 'הרמה טבעית שגורמת לריסים להראות כמו מסקרה ללא פגיעה בשערה הטבעית. טיפול עד שעה, מחזיק עד חודשיים',
       mainImage: riss1,
       additionalImages: [riss1, riss2, ],
       problems: [
-        'ריסים ישרים ושטוחים שלא נראים',
+        'ריסים ישרים ושטוחים',
         'מראה עייף של העיניים',
-        'הצורך במסקרה מדי יום',
+        'צורך במסקרה מדי יום',
         'רצון במראה טבעי ונפוח לריסים'
       ],
       suitableFor: [
         'נשים בכל הגילאים עם ריסים טבעיים',
         'מי שרוצה מראה טבעי ולא מוגזם',
-        'רוצה לחסוך זמן באיפור היומי',
-        'מחפשת פתרון זמני ועדין לריסים'
+        'מי שרוצה לחסוך זמן באיפור היומי',
+        'מי שמחפשת פתרון זמני ועדין לריסים שלה'
       ]
     }
   ];

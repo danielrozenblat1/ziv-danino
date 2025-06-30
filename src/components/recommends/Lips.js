@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './Lips.module.css';
 
 // Import your images
-import result1 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 1.png";
+
 import result2 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 2.png";
-import result3 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 3.png";
+
 import result4 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 4.png";
 import result5 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 5.png";
 import result6 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 6.png";
@@ -23,7 +23,7 @@ import result18 from "../../images/זיו דנינו מיקרופיגמנטצי�
 
 const Lips = () => {
   const images = [
-    result1, result2, result3, result4, result5, result6, 
+    result2, result4, result5, result6, 
     result7, result8, result9, result10, result11, result12,
     result13, result14, result15, result16, result17, result18
   ];

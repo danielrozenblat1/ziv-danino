@@ -160,10 +160,11 @@
 .mainImage {
   width: 100px;
   height: 80px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 12px rgba(160, 130, 100, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .drawerContent {
@@ -261,7 +262,7 @@
 
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
 }
 
@@ -276,7 +277,10 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 12px rgba(160, 130, 100, 0.1);
   transition: transform 0.3s ease;
-  aspect-ratio: 1 / 1;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gridImageContainer:hover {
@@ -286,8 +290,10 @@
 .gridImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .actionSection {
@@ -359,6 +365,7 @@
   
   .gridImageContainer {
     border-radius: 10px;
+    min-height: 100px;
   }
   
   .mainImage {
@@ -419,6 +426,7 @@
   
   .gridImageContainer {
     border-radius: 8px;
+    min-height: 80px;
   }
   
   .contentSection {

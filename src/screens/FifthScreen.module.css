@@ -1,0 +1,369 @@
+/* FifthScreen.module.css */
+
+.container {
+
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  min-height: 100vh;
+  font-family: 'AssistantR', sans-serif;
+  line-height: 1.7;
+  color: #4a4a4a;
+  direction: rtl;
+  text-align: right;
+}
+
+.introText {
+
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.3),
+    0 8px 32px rgba(200, 200, 200, 0.15),
+    0 2px 8px rgba(180, 180, 180, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+
+.introText::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, 
+    rgba(255, 240, 245, 0.4) 0%,
+    rgba(254, 246, 248, 0.3) 50%,
+    rgba(255, 242, 246, 0.4) 100%);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.methodText {
+  background: rgba(255, 243, 247, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2),
+    0 6px 24px rgba(190, 190, 190, 0.12),
+    0 1px 6px rgba(170, 170, 170, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 17px;
+  text-align: center;
+  background-image: linear-gradient(120deg, 
+    rgba(255, 240, 246, 0.5) 0%,
+    rgba(254, 244, 247, 0.4) 100%);
+}
+
+.descriptionText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin: 20px 0;
+  text-align: justify;
+  padding: 0;
+}
+
+.imageContainer {
+  text-align: center;
+  margin: 35px 0;
+  background: rgba(255, 242, 247, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.4),
+    0 12px 40px rgba(200, 200, 200, 0.18),
+    0 3px 12px rgba(180, 180, 180, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.imageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, 
+    rgba(255, 238, 245, 0.5) 0%,
+    rgba(254, 244, 248, 0.3) 50%,
+    rgba(255, 240, 246, 0.4) 100%);
+  border-radius: 25px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.microtouchImage {
+  max-width: 60%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(150, 150, 150, 0.15);
+}
+
+.contentSection {
+  background: rgba(255, 241, 246, 0.7);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 25px 0;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.3),
+    0 8px 32px rgba(190, 190, 190, 0.14),
+    0 2px 8px rgba(170, 170, 170, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-image: linear-gradient(130deg, 
+    rgba(255, 239, 245, 0.5) 0%,
+    rgba(254, 243, 247, 0.4) 100%);
+}
+
+.sectionTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #3a3a3a;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.sectionSubtitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #4a4a4a;
+  margin: 25px 0 15px 0;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.sectionText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.suitableList {
+  background: rgba(255, 240, 246, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2),
+    0 4px 16px rgba(180, 180, 180, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-image: linear-gradient(115deg, 
+    rgba(255, 237, 244, 0.45) 0%,
+    rgba(254, 241, 246, 0.35) 100%);
+}
+
+.suitableList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suitableList li {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.suitableList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d4a574;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.processSection {
+  background: rgba(255, 239, 245, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 28px;
+  margin: 25px 0;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.25),
+    0 6px 24px rgba(185, 185, 185, 0.12),
+    0 1px 6px rgba(165, 165, 165, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-image: linear-gradient(125deg, 
+    rgba(255, 236, 244, 0.5) 0%,
+    rgba(254, 240, 246, 0.4) 100%);
+}
+
+.processSection ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step-counter;
+}
+
+.processSection li {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+  padding-left: 40px;
+  position: relative;
+  counter-increment: step-counter;
+}
+
+.processSection li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 8px;
+  top: 0;
+  background: linear-gradient(135deg, #e8c4a0, #d4a574);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(180, 150, 120, 0.3);
+}
+
+.durationSection {
+  background: rgba(255, 242, 247, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.2),
+    0 5px 20px rgba(175, 175, 175, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  background-image: linear-gradient(120deg, 
+    rgba(255, 238, 246, 0.45) 0%,
+    rgba(254, 242, 247, 0.35) 100%);
+}
+
+.formSection {
+  margin-top: 40px;
+  background: rgba(255, 240, 246, 0.8);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  padding: 35px;
+  box-shadow: 
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.4),
+    0 10px 35px rgba(195, 195, 195, 0.16),
+    0 3px 10px rgba(175, 175, 175, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-image: radial-gradient(circle at center, 
+    rgba(255, 236, 245, 0.5) 0%,
+    rgba(254, 240, 247, 0.4) 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 15px;
+  }
+  
+  .introText,
+  .methodText,
+  .contentSection,
+  .processSection,
+  .formSection {
+    padding: 20px;
+  }
+  
+  .imageContainer {
+    padding: 20px;
+    margin: 25px 0;
+  }
+  
+  .microtouchImage {
+    max-width: 90%;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+  }
+  
+  .sectionSubtitle {
+    font-size: 20px;
+  }
+  
+  .sectionText,
+  .suitableList li,
+  .processSection li {
+    font-size: 15px;
+  }
+  
+  .introText {
+    font-size: 16px;
+  }
+}
+/* Base styles */
+.title {
+    font-family: "OpenSans", sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem auto 0rem;
+    background: linear-gradient(135deg, #000000, #1a1a1a, #333333, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.4;
+    max-width: 92%;
+    direction: rtl;
+    position: relative;
+    letter-spacing: -2px;
+    padding: 0 1rem;
+    z-index: 1;
+    transition: all 0.5s ease;
+    word-wrap: break-word;
+}
+
+.description {
+    font-family: "OpenSansR", sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1rem auto 1rem;
+    background: linear-gradient(135deg, #000000, #1a1a1a, #333333, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.4;
+    max-width: 92%;
+    direction: rtl;
+    position: relative;
+    letter-spacing: -0.5px;
+    padding: 0 1rem;
+    z-index: 1;
+    transition: all 0.5s ease;
+    word-wrap: break-word;
+}
