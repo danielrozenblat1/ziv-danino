@@ -5,14 +5,15 @@ import styles from './Treatments.module.css';
 // Import הרמת ריסים images
 import riss1 from "../../images/הרמת ריסים נושא.jpeg";
 import riss2 from "../../images/זיו דנינו הרמת ריסים-2.png";
-
+import riss3 from "../../images/זיו דנינו הרמת ריסים 3.png"
 
 // Import מיקרופיגמנטציה בגבות images
 import gabotMicro1 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 2.png";
 import gabotMicro2 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 5.png";
 import gabotMicro3 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 4.png";
 import gabotMicro4 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 10.png";
-
+import gabotMicro5 from "../../images/זיו דנינו מיקרופיגמנטציה בגבות 11.png";
+import gabotMicro6 from "../../images/זיו דנינו מיקרופיגמנטציה משולב.png";
 // Import מיקרופיגמנטציה בשפתיים images
 import sfatayimMicro1 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 6.png";
 import sfatayimMicro2 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 10.png";
@@ -33,8 +34,8 @@ const TreatmentsDrawer = () => {
       id: 1,
       name: 'מיקרופיגמנטציה לגבות',
       description: '2 טיפולים. תוצאה טבעית ומדויקת ללא צורך בתחזוקה יום יומית',
-      mainImage: gabotMicro2,
-      additionalImages: [gabotMicro1, gabotMicro2, gabotMicro3, gabotMicro4],
+      mainImage: gabotMicro6,
+      additionalImages: [gabotMicro1, gabotMicro2, gabotMicro3, gabotMicro4 ,gabotMicro5],
       problems: [
         'פתרון לגבות לא סימטריות או דלילות', 
         'חיסכון בזמן יקר כל בוקר', 
@@ -90,7 +91,7 @@ const TreatmentsDrawer = () => {
       name: 'הרמת ריסים',
       description: 'הרמה טבעית שגורמת לריסים להראות כמו מסקרה ללא פגיעה בשערה הטבעית. טיפול עד שעה, מחזיק עד חודשיים',
       mainImage: riss1,
-      additionalImages: [riss1, riss2, ],
+      additionalImages: [riss1, riss2,riss3 ],
       problems: [
         'ריסים ישרים ושטוחים',
         'מראה עייף של העיניים',
