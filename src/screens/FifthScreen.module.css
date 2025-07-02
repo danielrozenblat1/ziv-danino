@@ -276,7 +276,7 @@
 
 /* Special elements with glass morphism effect */
 .imageContainer {
-  width: 320px;
+  width:35%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -681,7 +681,7 @@
     width: calc(100vw - 20px);
     min-width: 280px;
     padding: 15px;
-    margin: 1% 10px;
+ margin: 1.5% auto;
     border-radius: 16px;
   }
   
@@ -717,7 +717,7 @@
   }
   
   .description {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
   .sectionTitle {
@@ -751,7 +751,7 @@
     width: calc(100vw - 24px);
     min-width: 300px;
     padding: 18px;
-    margin: 1.5% 12px;
+    margin: 1.5% auto;
   }
   
   .plainSection {
@@ -816,14 +816,14 @@
     width: calc(100vw - 28px);
     min-width: 320px;
     padding: 20px;
-    margin: 2% 14px;
+  margin: 1.5% auto;
   }
   
   .plainSection {
     width: calc(100vw - 28px);
     min-width: 320px;
     padding: 25px;
-    margin: 2% 14px;
+  margin: 1.5% auto;
   }
   
   .suitableList li {
@@ -876,14 +876,14 @@
     width: calc(100vw - 32px);
     min-width: 350px;
     padding: 22px;
-    margin: 2% 16px;
+  margin: 1.5% auto;
   }
   
   .plainSection {
     width: calc(100vw - 32px);
     min-width: 350px;
     padding: 28px;
-    margin: 2% 16px;
+ margin: 1.5% auto;
   }
   
   .suitableList li {

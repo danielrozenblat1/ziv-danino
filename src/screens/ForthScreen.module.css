@@ -18,6 +18,19 @@
     word-wrap: break-word;
 }
 
+.imageContainer{
+    width: 300px;
+  display: flex;
+  justify-content: center;
+    margin:2% auto;
+}
+.image{
+    width: 90%;
+    border-radius: 30px;
+    justify-content: center;
+object-fit: contain;
+}
+
 .description {
     font-family: "OpenSansR", sans-serif;
     font-size: 1.4rem;

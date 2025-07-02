@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ScrollReveal from 'scrollreveal';
 import styles from './Carousel.module.css';
+import result from "../../images/זיו דנינו המלצות.png";
 import result1 from "../../images/זיו דנינו המלצות 1.png";
 import result2 from "../../images/זיו דנינו המלצות 2.png";
 import result3 from "../../images/זיו דנינו המלצות 3.png";
@@ -27,6 +28,11 @@ const TestimonialsCarousel = () => {
 
   // תמונות ההמלצות של זיו דנינו
   const testimonials = [
+     {
+      id: 20,
+      image: result,
+      alt: "המלצה 1 מלקוחה מרוצה של זיו דנינו"
+    },
     {
       id: 1,
       image: result1,

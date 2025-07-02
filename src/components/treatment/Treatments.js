@@ -19,13 +19,13 @@ import sfatayimMicro1 from "../../images/זיו דנינו מיקרופיגמנ�
 import sfatayimMicro2 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 10.png";
 import sfatayimMicro3 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 11.png";
 import sfatayimMicro4 from "../../images/זיו דנינו מיקרופיגמנטציה בשפתיים 9.png";
-
+import sfatayimMicro5 from "../../images/זיו דנינו שפתיים ראשית.png";
 // Import מיקרוטאץ' images
 import microTouch1 from "../../images/זיו דנינו מיקרוטאצ 1.png";
 import microTouch2 from "../../images/זיו דנינו מיקרוטאצ 2.png";
 import microTouch3 from "../../images/זיו דנינו מיקרוטאצ 3.png";
 import microTouch4 from "../../images/זיו דנינו מיקרוטאצ 4.png";
-
+import microTouch5 from "../../images/מיקרוטאצ ראשית.jpeg";
 const TreatmentsDrawer = () => {
   const [openDrawer, setOpenDrawer] = useState(null);
 
@@ -53,7 +53,7 @@ const TreatmentsDrawer = () => {
       id: 2,
       name: 'מיקרופיגמנטציה לשפתיים',
       description: '2 טיפולים. פתרון לשפתיים כהות ויצירת סימטריה מושלמת',
-      mainImage: sfatayimMicro2,
+      mainImage: sfatayimMicro5,
       additionalImages: [sfatayimMicro1, sfatayimMicro2, sfatayimMicro3, sfatayimMicro4],
       problems: [
         'שפתיים כהות הזקוקות לנטרול והבהרה',
@@ -71,7 +71,7 @@ const TreatmentsDrawer = () => {
       id: 3,
       name: 'מיקרוטאצ\'',
       description: 'שיטה ייחודית שפיתחתי למילוי חורים קטנים בגבות. 30 דקות בלבד, מחזיק 3-4 חודשים',
-      mainImage: microTouch2,
+      mainImage: microTouch5,
       additionalImages: [microTouch1, microTouch2, microTouch3, microTouch4],
       problems: [
         'חורים קטנים בגבות הדורשים מילוי עדין',
@@ -91,7 +91,7 @@ const TreatmentsDrawer = () => {
       name: 'הרמת ריסים',
       description: 'הרמה טבעית שגורמת לריסים להראות כמו מסקרה ללא פגיעה בשערה הטבעית. טיפול עד שעה, מחזיק עד חודשיים',
       mainImage: riss1,
-      additionalImages: [riss1, riss2,riss3 ],
+      additionalImages: [riss1,riss3 ],
       problems: [
         'ריסים ישרים ושטוחים',
         'מראה עייף של העיניים',

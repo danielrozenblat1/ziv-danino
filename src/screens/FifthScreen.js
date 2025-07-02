@@ -5,7 +5,7 @@ import microtouch from "../images/זיו דנינו מיקרוטאצ.png"
 const FifthScreen = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.description}>
+      <div className={styles.description} style={{fontWeight:"bold"}}>
         במהלך השנים שמתי לב, שלא כל אחת צריכה טיפולי מיקרופיגמנטציה מלאים (וגם לשלם את המחיר המלא)
       </div>
       
@@ -71,7 +71,7 @@ const FifthScreen = () => {
           <div className={styles.qaItem}>
             <h3 className={styles.sectionSubtitle}>כמה זמן הטיפול מחזיק?</h3>
             <p className={styles.sectionText}>
-              המיקרוטאצ׳ מחזיק בממוצע 3-4 חודשים, תלוי בעור ובאורח החיים שלך.
+              המיקרוטאצ׳ מחזיק בממוצע 3-4 חודשים, תלוי בעור ובאורח החיים שלך (בטיפול נוסף - הטיפול מחזיק לשנה עד שנה וחצי).
             </p>
           </div>
 
@@ -79,7 +79,7 @@ const FifthScreen = () => {
       </div>
 
     
-        <FormScreen title="לשיחת ייעוץ ללא עלות"/>
+     
   
     </div>
   );

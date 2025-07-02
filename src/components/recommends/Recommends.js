@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // Import your images
+import result from "../../images/זיו דנינו המלצות.png";
 import result1 from "../../images/זיו דנינו המלצות 1.png";
 import result2 from "../../images/זיו דנינו המלצות 2.png";
 import result3 from "../../images/זיו דנינו המלצות 3.png";
@@ -22,7 +23,7 @@ import result12 from "../../images/זיו דנינו המלצות 12.png";
 
 const Recommendations = () => {
   const images = [
-    result1, result2, result3, result4, result5, 
+   result, result1, result2, result3, result4, result5, 
     result6, result7, result8, result9, result10,
     result11, result12
   ];
