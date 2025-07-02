@@ -32,6 +32,39 @@ const FirstScreen = () => {
     img.src = ziv;
   }, []);
 
+  // פונקציה לגלילה לטופס - גלילה חלקה יותר
+  const scrollToForm = () => {
+    const formElement = document.getElementById('טופס');
+    if (formElement) {
+      // קבלת המיקום הנוכחי והמיקום היעד
+      const targetPosition = formElement.getBoundingClientRect().top + window.pageYOffset - 80; // 80px offset מהחלק העליון
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 1200; // משך הגלילה במילישניות (1.2 שניות)
+      let start = null;
+
+      // פונקציית easing לגלילה חלקה יותר
+      const easeInOutQuart = (t) => {
+        return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
+      };
+
+      // אנימציית הגלילה
+      const animation = (currentTime) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        window.scrollTo(0, startPosition + distance * easeInOutQuart(progress));
+        
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      };
+
+      requestAnimationFrame(animation);
+    }
+  };
+
   // אם התמונה לא נטענה עדיין, הצג Loader
   if (!imageLoaded) {
     return <Loader />;
@@ -80,7 +113,10 @@ const FirstScreen = () => {
         </div>
         
         {/* CTA Button - רחב וגדול יותר */}
-        <button className={`${styles.ctaButton} ${styles.fadeInElement}`}>
+        <button 
+          className={`${styles.ctaButton} ${styles.fadeInElement}`}
+          onClick={scrollToForm}
+        >
           <span className={styles.buttonText}>זיו אני רוצה לשריין טיפול</span>
           <div className={styles.buttonGlow}></div>
         </button>
