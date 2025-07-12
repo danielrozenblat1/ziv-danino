@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaUsers, FaPlus, FaMinus } from 'react-icons/fa';
+import { FaUsers, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import styles from './Treatments.module.css';
 
 // Import הרמת ריסים images
@@ -26,6 +26,7 @@ import microTouch2 from "../../images/זיו דנינו מיקרוטאצ 2.png";
 import microTouch3 from "../../images/זיו דנינו מיקרוטאצ 3.png";
 import microTouch4 from "../../images/זיו דנינו מיקרוטאצ 4.png";
 import microTouch5 from "../../images/מיקרוטאצ ראשית.jpeg";
+
 const TreatmentsDrawer = () => {
   const [openDrawer, setOpenDrawer] = useState(null);
 
@@ -119,7 +120,7 @@ const TreatmentsDrawer = () => {
           <div className={styles.drawerHeader} onClick={() => toggleDrawer(treatment.id)}>
             <div className={styles.toggleButton}>
               <span className={`${styles.icon} ${openDrawer === treatment.id ? styles.iconOpen : ''}`}>
-                {openDrawer === treatment.id ? <FaMinus /> : <FaPlus />}
+                {openDrawer === treatment.id ? <FaChevronUp /> : <FaChevronDown />}
               </span>
             </div>
             

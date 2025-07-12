@@ -10,7 +10,7 @@ const FifthScreen = () => {
       </div>
       
       <div className={styles.title}>
-        ולכן פיתחתי את שיטת המיקרוטאצ׳.
+        ולכן פיתחתי את שיטת המיקרוטאצ׳ <br/> טאצ׳ אחד קטן וזה שלך.
       </div>
       
       <div className={styles.description}>

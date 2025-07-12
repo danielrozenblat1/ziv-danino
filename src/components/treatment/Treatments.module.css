@@ -120,7 +120,6 @@
 }
 
 .iconOpen {
-  transform: rotate(180deg);
   background: rgba(255, 228, 225, 0.2);
   color: rgba(101, 85, 70, 0.8);
 }
