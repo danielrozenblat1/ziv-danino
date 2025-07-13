@@ -36,7 +36,7 @@ const Recommendations = () => {
     autoplay: true,
     pauseOnHover: true,
     slidesToShow: window.innerWidth < 450 ? 1 :
-                  window.innerWidth <= 1050 ? 2 : 3,
+                  window.innerWidth <= 1050 ? 2 : 4,
     slidesToScroll: 1,
   };
 
@@ -49,7 +49,7 @@ const Recommendations = () => {
     <>
       <div className={styles.title}>ואלו ההודעות שאני מקבלת מהן:</div>
       <div className={styles.explain}>
-        תחליקי בין התמונות
+        החליקי בין התמונות
       </div>
       <div className={styles.sliderContainer}>
         <Slider {...sliderSettings}>
@@ -68,7 +68,7 @@ const Recommendations = () => {
           ))}
         </Slider>
       </div>
-      <Button text="זיו, בואי נדבר!" />
+   
     </>
   );
 };

@@ -13,6 +13,7 @@ import ForthScreen from './screens/ForthScreen';
 import ByMe from './components/ByMe/ByMe';
 import TreatmentsDrawer from './components/treatment/Treatments';
 import FifthScreen from './screens/FifthScreen';
+import Recommendations from './components/recommends/Recommends';
 
 function App() {
   return <>
@@ -23,7 +24,7 @@ function App() {
   <Lips/>
   <Brows/>
     <FifthScreen/>
-  <TestimonialsCarousel/>
+<Recommendations/>
   
 
   <FormScreen/>
